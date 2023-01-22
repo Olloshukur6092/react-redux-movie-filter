@@ -31,6 +31,12 @@ function Buttons() {
       >
         Amerika
       </Button>
+      <Button
+        variant="secondary"
+        onClick={() => dispatch({ type: SELECT_COUNTRY, payload: { country: "Xitoy" } })}
+      >
+        Xitoy
+      </Button>
     </ButtonGroup>
   );
 }
