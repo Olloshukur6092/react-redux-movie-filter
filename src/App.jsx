@@ -1,22 +1,19 @@
-// import { useState } from 'react'
-import { Container } from "react-bootstrap";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Buttons from "./components/Buttons";
 import Header from "./components/Header";
-import Input from "./components/Input";
-import Lists from "./components/Lists";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Register from "./components/Register";
 
 function App() {
   return (
     <div className="app">
       <Header />
-      <Container className="mt-4 shadow-lg p-2">
-        <div className="d-flex justify-content-between">
-          <Buttons />
-          <Input />
-        </div>
-        <Lists />
-      </Container>
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/login" element={ <Login /> } />
+        <Route path="/register" element={ <Register /> } />
+      </Routes>
     </div>
   );
 }
